@@ -1,13 +1,5 @@
-/*
-  by MohammedDamirchi
-*/
 #include <MPU9250_asukiaaa.h>
 #include <Adafruit_BMP280.h>
-
-//the SDA (data line) and SCL (clock line). Uno, Ethernet  A4 (SDA), A5 (SCL)
-#define SDA_PIN 21
-#define SCL_PIN 22
-
 
 Adafruit_BMP280 bme; // I2C
 MPU9250_asukiaaa mySensor;
@@ -69,10 +61,10 @@ void loop() {
     Serial.print(" ");
     Serial.print( readData( "NTC" ));
     Serial.print(" ");
-  Serial.print( readData( "MPX4115" ));
-  Serial.print(" ");
-  Serial.print( readData( "L" ));
-  Serial.print(" ");
+    Serial.print( readData( "MPX4115" ));
+    Serial.print(" ");
+    Serial.print( readData( "L" ));
+    Serial.print(" ");
 
     aX = mySensor.accelX();
     aY = mySensor.accelY();
